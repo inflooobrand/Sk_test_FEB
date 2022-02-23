@@ -1,0 +1,87 @@
+<?php
+
+namespace DummyNamespace;
+
+use App\Models\DummyModel;
+
+class DummyClass
+{
+    /**
+     * @type DummyModel
+     */
+    protected $DummyModelVariable;
+
+    /**
+     * @method __construct
+     */
+    public function __construct()
+    {
+        $this->DummyModelVariable = new DummyModel();
+    }
+
+    /**
+     * return all row DummyModelVariable
+     * @method all
+     * @return Illuminate\Database\Eloquent\Collection  [\App\Models\DummyModel]
+     */
+    public function all()
+    {
+        return $this->DummyModelVariable->all();
+    }
+
+    /**
+     * find to row DummyModelVariable
+     * @method DummyModelVariable
+     * @param  integer          $id [int]
+     */
+    public function DummyModelVariable($id)
+    {
+        return $this->DummyModelVariable->find($id);
+    }
+
+    /**
+     * Stored row DummyModelVariable
+     * @method store
+     * @param  Illuminate\Http\Request $request [App\Http\Requests]
+     * @return bool
+     */
+    public function store($request)
+    {
+        $this->DummyModelVariable->create([
+
+        ]);
+
+        return true;
+    }
+
+    /**
+     * Update row DummyModelVariable
+     * @method update
+     * @param  Illuminate\Http\Request $request [App\Http\Requests]
+     * @param  integer $id      [int]
+     * @return bool
+     */
+    public function update($request, $id)
+    {
+        $DummyModelVariable = $this->DummyModelVariable($id);
+
+        $DummyModelVariable->update([
+
+        ]);
+
+        return true;
+    }
+
+    /**
+     * Destroy row DummyModelVariable
+     * @method destroy
+     * @param  integer  $id [int]
+     * @return bool
+     */
+    public function destroy($id)
+    {
+        $this->DummyModelVariable($id)->delete();
+
+        return true;
+    }
+}
